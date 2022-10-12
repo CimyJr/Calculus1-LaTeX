@@ -1,0 +1,91 @@
+\documentclass[a4paper]{exam}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\printanswers
+
+\usepackage{url}
+\usepackage{endnotes}
+
+\def\enotesize{\normalsize}
+\def\makeenmark{\relax}
+\def\notesname{Answers}
+\def\answer#1{\endnotetext{\vspace*{-3.5ex}\begin{solution}#1\end{solution}\unskip}}
+\def\theanswers{\theendnotes \medskip}
+\newcounter{solution}
+\stepcounter{solution}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution \arabic{solution}:}\enspace\stepcounter{solution}}
+
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{ifce.png}
+\end{figure}
+
+\title{Instituto de Educação de Ciências e Tecnologia do Ceará}
+\author{José Francimi Vasconcelos de Queiroz Júnior}
+\date{\today}
+
+
+
+\maketitle
+
+\section{Trabalho de Cálculo}
+\subsection{Questões}
+\begin{questions}
+
+\question Sejam f e g funções tais que \(\lim_{x \to a}f(x) = L\) e \(\lim_{x \to a}g(x) = M\), com M $\neq$ 0. Prove que \(\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}\).
+
+\answer{Como M $\neq$ 0 \Rightarrow Pelo teorema: \(\lim_{x \to a} \frac{1}{g(x)}=\frac{1}{M} \text{ e } \lim_{x \to a} f(x)=L \) $\therefore$ 
+\newline \[\lim_ {x \to a} \frac{f(x)}{g(x)}=\lim_{x \to a} \left[f(x) \frac{1}{g(x)}\right] = \lim_{x \to a} \frac{f(x)}{g(x)} \lim_{x \to a} \frac{1}{g(x)}=L \frac{1}{M}=\frac{L}{M}\]}
+
+\question Mostre que \(\lim_{x \to 3} x^2=9\).
+
+\answer{Queremos provar que se \(0< \mid x-1 \mid <\) $\delta$ \( \Rightarrow \mid x^2-9 \mid < \) $\varepsilon$,
+\newline mas \(\mid x^2-9 \mid = \mid (x-3)(x+3) \mid = \mid x-3 \mid \mid x+3 \mid\) 
+\newline Suponha que $\delta$ \(\leq 1\) $\therefore$ se \(\mid x-3\mid <\) $\delta$ \Rightarrow \(\mid x-3\mid < 1\)
+\newline \(-1 < x-3< 1 \Rightarrow 2 < x < 4 \Rightarrow 5 < x+3 <7 \Rightarrow \mid x+3 \mid <7\) 
+\newline \newline $\therefore$ \(\mid x-3 \mid \mid x+3 \mid <\) $\delta$ 7 
+\newline \newline $\delta$ \(\leq \frac{\text{$\varepsilon$}}{7}\) Tome $\delta$ \(= mín\{1, \frac{\text{$\varepsilon$}}{7}\}\) 
+\newline \newline $\therefore$ Se \(0< \mid x-3 \mid <\) $\delta$ \Rightarrow \(\mid x-3 \mid < \frac{\text{$\varepsilon$}}{7}\) \Rightarrow \(\mid x-3 \mid 7 < \text{$\varepsilon$}\) \Rightarrow 
+\newline \(\mid x-3 \mid \mid x+3 \mid < \mid x-3 \mid 7 < \text{$\varepsilon$}\) \Rightarrow \(\mid x-3 \mid \mid x+3 \mid <\) $\varepsilon$ \Rightarrow \(\mid x^2-9 \mid <\) $\varepsilon$ } 
+
+\question Calcule:
+
+\begin{parts}
+
+\part \(\lim_{x \to -2} \frac{2x^3+9x^2+12x+4}{-x^3-2x^2+4x+8}\)
+
+\answer{(a) Temos:\[\lim_{x \to -2} \frac{2x^3+9x^2+12x+4}{-x^3-2x^2+4x+8} \Rightarrow \lim_{x \to -2} \frac{(2x^2+5x+2)(x+2)}{(-x^2+4)(x+2)}\] 
+ \[\Rightarrow \lim_{x \to -2} \frac{2x^2+5x+2}{-x^2+4} \Rightarrow \lim_{x \to -2} \frac{(2x+1)(x+2)}{(-x+2)(x+2)}\]
+ \[\Rightarrow \lim_{x \to -2} \frac{2x+1}{-x+2} = \frac{-3}{4}\]
+ \newline (b) Temos: \[\lim_{x \to 0} \frac{\sqrt{x+1}-\sqrt{1-x}}{x^2+x-2}\left( \frac{\sqrt{x+1}-\sqrt{1-x}}{\sqrt{x+1}-\sqrt{1-x}}  \right) =\]
+ \[= \lim_{x \to 0} \left( \frac{x+1-(1-x)}{x(\sqrt{1+x}+\sqrt{1-x}}\right) = \lim_{x \to 0} \frac{2x}{x(\sqrt{1+x}+\sqrt{1-x})} = \lim_{x \to 0} \frac{2}{\sqrt{1+x}+\sqrt{1-x}} = 1\] } 
+
+\part \(\lim_{x \to 0} \frac{\sqrt{x+1}-\sqrt{1-x}}{x^2+x-2}\)
+%Resposta da b começa na linha 69
+\end{parts}
+
+\question Existe um número a tal que: \(\lim_{x \to -2} \frac{3x^2+ax+a+3}{x^2+x-2} \) exista? Caso exista, encontre a e o valor do limite.
+
+\answer{Substituindo o x por -2 
+\newline Temos: \(3(-2)^2+a(-2)+a+3=0\) \Rightarrow \(12-2a+a+3=0\) \Rightarrow \(-a+15=0\) \Rightarrow \(a=15\)
+\newline O número existe e é 15
+\newline Substituindo a por 15 temos: \[\lim_{x \to -2} \frac{3x^2+15x+18}{x^2+x-2} \Rightarrow \lim_{x \to -2} \frac{(3x+9)(x+2)}{(x-1)(x+2)}\] 
+\newline \[\Rightarrow \lim_{x \to -2} \frac{3x+9}{x-1} = \frac{3(-2)+9}{-2-1} = \frac{3}{-3} = -1 \] }
+
+\end{questions}
+
+\theanswers
+
+\clearpage
+
+
+\end{document}
