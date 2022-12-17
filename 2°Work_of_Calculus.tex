@@ -1,0 +1,118 @@
+\documentclass[a4paper]{exam}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\printanswers
+
+\usepackage{url}
+\usepackage{endnotes}
+
+\def\enotesize{\normalsize}
+\def\makeenmark{\relax}
+\def\notesname{Answers}
+\def\answer#1{\endnotetext{\vspace*{-3.5ex}\begin{solution}#1\end{solution}\unskip}}
+\def\theanswers{\theendnotes \medskip}
+\newcounter{solution}
+\stepcounter{solution}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution \arabic{solution}:}\enspace\stepcounter{solution}}
+
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{ifce.png}
+\end{figure}
+
+\title{Instituto de Educação de Ciências e Tecnologia do Ceará}
+\author{José Francimi Vasconcelos de Queiroz Júnior}
+\date{\today}
+
+
+
+\maketitle
+
+\section{Trabalho de Cálculo}
+\subsection{Questões}
+\begin{questions}
+
+    
+
+\question Calcule, caso existam, os limites abaixo:
+
+\begin{parts}
+
+\part \(\lim_{x \to 1}\frac{f(x) - f(1)}{x - 1}\), onde f(x) = $\left\{
+\begin{alignedat}{3}
+x^2 \;\text{se}\; x \leq 1 \\
+2x - 1 \;\text{se}\; x > 1
+\end{alignedat}
+\right.$
+
+\answer{(a) \[\lim_{x \to 1^-}\frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1^-}\frac{x^2-1}{x-1} = \lim_{x \to 1^-}\frac{(x + 1)(x-1)}{x - 1} = \lim_{x \to 1^-}x + 1 = 2\]
+\[\lim_{x \to 1^+}\frac{f(x) - f(1)}{x - 1} = \lim_{x \to  1^+}\frac{2x - 2}{x - 1} = \lim_{x \to 1^+} \frac{2(x - 1)}{x - 1} = \lim_{x \to  1^+}2 = 2\]
+\[\text{Se os dois existem e são iguais, logo o  limite existe!}\]
+ (b) \[\lim_{x \to 1^+}\frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1^+}\frac{x + 1 - 2}{x - 1} = \lim_{x \to 1^+}\frac{x - 1}{x - 1} = 1\]
+ \[\lim_{x \to 1^-}\frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1^-}\frac{2x - 2}{x - 1} = \lim_{x \to 1^-}\frac{2(x - 1)}{(x - 1)} = \lim_{x \to 1^-}2 = 2\]
+ \[\text{Os limites são diferentes, logo o limite não existe!}\]} 
+
+\part \(\lim_{x \to 1} \frac{f(x) - f(1)}{x - 1}\), onde f(x) = $\left\{
+\begin{alignedat}{3}
+x + 1 \;\text{se}\; x \geq 1 \\
+2x \;\text{se}\; x < 1
+\end{alignedat}
+\right.$
+%Resposta da b começa na linha 60
+\end{parts}
+
+\question Suponha que \(|f(x) - f(1)| \leq (x - 1)^2, \forall x \in \mathbb{R}. \text{Prove que f é contínua em 1.}\)
+
+\answer{\[|f(x) - f(1)| \leq (x - 1)^2\] 
+\[-(x - 1)^2 \leq f(x) - f(1) \leq (x - 1)^2\]
+\[-(x - 1)^2 + f(1) \leq f(x) \leq (x - 1)^2 + f(1)\]
+\[ \lim_{ x \to 1} -(x - 1)^2 + f(1) \leq \lim_{x \to 1} f(x) \leq  \lim_{ x \to 1} (x - 1)^2 + f(1)\]
+\[\text{Pelo teorema do confronto}\] 
+\[\lim_{x \to 1} f(x) = f(1) \]
+\[\text{Portanto f é continua em 1.} \]}
+
+\question Sabendo que \( \lim_{x \to \pm \infty}\left(1 + \frac{1}{x} \right)^x = e \), mostre que \(\lim_{x \to 0}(1 + x)^\frac{1}{x} = e.\)
+
+\answer{\[\text{Pelos números positivos:}\]
+\[\lim_{x \to 0^+}(1 +x)^\frac{1}{x}\]
+\[x = \frac{1}{y} \Rightarrow y = \frac{1}{x} \Rightarrow x \to 0^+ \Rightarrow \frac{1}{x} \to + \infty \therefore y \to + \infty\]
+\[\lim_{x \to 0^+ }(1 + x)^\frac{1}{x} \Rightarrow \lim_{y \to + \infty}\left(1 +\frac{1}{y} \right)^y = e\]
+\[\text{Pelos números negativos:}\]
+\[\lim_{x \to 0^-}(1 + x)^\frac{1}{x}\]
+\[x = \frac{1}{y} \Rightarrow y = \frac{1}{x} \Rightarrow x \to 0^- \Rightarrow \frac{1}{x} \to -\infty \therefore y \to -\infty\]
+\[\lim_{x \to 0^-} (1 + x)^\frac{1}{x} \Rightarrow \lim_{y \to -\infty} \left(1 + \frac{1}{y} \right)^y = e \]
+\[\therefore \lim_{x \to 0}(1 + x)^\frac{1}{x} = e \]
+\[\text{Os limites laterais existem!}\]}
+
+\question Seja \(a > 0, a \neq 1\), mostre que \(\lim_{h \to 0} \frac{a^h -1}{h} = Ln(a).\) A partir daí, conclua que \(\lim_{h \to 0}\frac{e^h -1}{h} = 1.\) 
+
+\answer{\[\lim_{h \to 0}\frac{a^h -1}{h}\]
+\[a^h - 1 = t \Rightarrow a^h = t + 1\]
+\[\Rightarrow ln a^h = ln(t + 1) \Rightarrow\]
+\[h . ln a = ln(t + 1)\]
+\[h =  \frac{ln(t + 1)}{ln(a)}\] 
+\[\text{quando }h \to 0 
+\Rightarrow a^h - 1 \to 0 \therefore t \to 0\]
+\[\lim_{h \to 0}\frac{a^h -1}{h} = \lim_{t \to 0}\frac{ln(t + 1)}{ln(a)} = \lim_{t \to 0}\frac{ln(t + 1)}{t}=\]
+\[\lim_{t \to 0}\frac{ln(a)}{\frac{1}{t} . ln(t + 1)} = \lim_{t \to 0}\frac{ln(a)}{ln(t + 1)^\frac{1}{t}}\]
+\[= \frac{ln(a)}{ln e} = ln(a) \therefore\]
+\[\lim_{h \to 0}\frac{a^h - 1}{h} = ln(a)\]
+\[\text{Em particular,  se a = e} \Rightarrow \lim_{h \to 0}\frac{e^h - 1}{h} = ln(e) = 1\]}
+
+\end{questions}
+
+\theanswers
+
+\clearpage
+
+
+\end{document}
